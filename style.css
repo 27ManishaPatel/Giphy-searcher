@@ -1,3 +1,6 @@
+body{
+  background-color: rgb(5, 42, 55);
+}
 .wrapper {
   margin: auto;
   display: flex;
