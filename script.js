@@ -20,7 +20,14 @@ gifyBtn.addEventListener("click", function() {
     }
 });
 
-
+// default gif 
+gifySearch = "find here";
+gifyTotal = 2;
+fetch(`https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&limit=${gifyTotal}&q=${gifySearch}`)
+    .then(response => response.json())
+    .then(data => {
+        displayGif(data);
+    });
 
 //function to display 
 function displayGif(data) {
