@@ -19,3 +19,17 @@ gifyBtn.addEventListener("click", function() {
             });
     }
 });
+
+
+
+//function to display 
+function displayGif(data) {
+  data.data.forEach(dat => {
+      const gifyUrl = dat.images.original.url;
+      let newImage = document.createElement("img");
+      newImage.setAttribute("class", "my-gify-style")
+      newImage.setAttribute("src", gifyUrl)
+      gifyContainer.appendChild(newImage);
+      console.log(gifyUrl)
+  });
+};
